@@ -1,0 +1,73 @@
+Basic status codes description in 2-3 lines
+
+200 OK
+The request was successful, and the server has returned the requested data.
+This is the most common success response for GET, POST, PUT, and DELETE operations.
+
+400 Bad Request
+The server cannot process the request due to invalid syntax or malformed data.
+Common causes include missing parameters, invalid JSON, or incorrect request format.
+
+401 Unauthorized
+The request requires authentication, and valid credentials were not provided.
+Usually occurs when tokens are missing, expired, or invalid.
+
+403 Forbidden
+The client is authenticated but does not have permission to access the resource.
+This happens when user roles or access rights are insufficient.
+
+404 Not Found
+The requested resource could not be found on the server.
+Commonly occurs when the URL is incorrect or the resource does not exist.
+
+500 Internal Server Error
+A generic error indicating something went wrong on the server side.
+Usually caused by unhandled exceptions or unexpected failures in backend logic.
+
+502 Bad Gateway
+The server received an invalid response from an upstream server.
+Common in microservices when one service fails to communicate properly with another.
+
+503 Service Unavailable
+The server is currently unable to handle the request due to overload or maintenance.
+Often temporary and may include a retry-after header.
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services that facilitate both declarative configuration and automation. 
+It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
+
+Kubernetes provides you with:
+ -> Service Discovery and load balancing
+ -> Storage  orchestration 
+ -> Automated rollouts and rollbacks
+ -> Automatic bin packing
+ -> Self-healing 
+ -> Secret and configuration management
+ -> Horizontal scaling 
+ -> IPv4/IPv6 dual-stack
+ -> Designed for extensibility
+
+A Kubernetes cluster consist of control plane plus set of worker machines, called nodes,that run containerized application.
+Every cluster needs atleast one worker node to run the application.The worker node host the pods that are components of the
+appliation workload
+
+control plane components:'
+
+-> kube-apiserver : The API server is a component of the Kubernetes control plane that exposes the Kubernetes API. 
+   The API server is the front end for the Kubernetes control plane.
+   The main implementation of a Kubernetes API server is kube-apiserver. 
+   kube-apiserver is designed to scale horizontally—that is, it scales by deploying more instances
+
+-> etcd : Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
+
+-> kube-scheduler : Control plane component that watches for newly created Pods with no assigned node, and selects a 
+   node for them to run on.
+
+-> kube-controller-manager:Control plane component that runs controller processes. Logically, each controller is a separate process, but to reduce complexity, they are all compiled into a single binary
+   and run in a single process.
+
+
+end - end
+
+example 
